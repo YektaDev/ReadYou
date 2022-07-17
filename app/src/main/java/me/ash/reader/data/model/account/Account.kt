@@ -19,4 +19,14 @@ data class Account(
     var type: AccountType,
     @ColumnInfo
     var updateAt: Date? = null,
+    @ColumnInfo
+    var syncOnStart: Boolean = false,
+    @ColumnInfo
+    var onlyOnWiFi: Boolean = false,
+    @ColumnInfo
+    var onlyWhenCharging: Boolean = false,
+    @ColumnInfo(defaultValue = "0")
+    var keep: Long = 0,
+    @ColumnInfo(defaultValue = "NULL")
+    var blockList: BlockList? = null,
 )

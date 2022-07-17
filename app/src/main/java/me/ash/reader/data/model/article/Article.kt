@@ -40,11 +40,11 @@ data class Article(
     var feedId: String,
     @ColumnInfo(index = true)
     var accountId: Int,
-    @ColumnInfo(defaultValue = "true")
+    @ColumnInfo
     var isUnread: Boolean = true,
-    @ColumnInfo(defaultValue = "false")
+    @ColumnInfo
     var isStarred: Boolean = false,
-    @ColumnInfo(defaultValue = "false")
+    @ColumnInfo
     var isReadLater: Boolean = false,
 ) {
 
